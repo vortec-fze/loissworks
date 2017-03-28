@@ -1,0 +1,354 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Authorization and Disclosure Form</title>
+    <link rel="stylesheet" href="main.css">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="main.js"></script>
+    
+</head>
+
+<body>
+    <div class="dark">
+        <div id="container">
+            <h1>&bull; AUTHORIZATION FOR USE AND DISCLOSURE OF PROTECTED HEALTH INFORMATION &bull;</h1>
+            <div class="underline">
+            </div>
+            <div id="statute">
+                <p>Health & Human Services 45 CFR 164.524(c)(4) expressly states that patients can direct the designated Healthcare Provider to forward a copy of requested Medical Records to any third party of the Patient’s choosing as detailed in the Patient Delivery Directive section of this Patient Request Form. Failure to adhere to the Patient Directive entitlement will necessitate the issuance of a compliance violation report to the Office of Civil Rights. </p>
+            </div>
+        
+            <form action="#" method="post" id="disclosure_form">
+                <div class="form-wrapper">
+                    <label class="text" for="facility">
+                        <span>Healthcare Provider Facility Name:</span>
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="(Facility Name)" name="facility" id="facility_input" />
+                        </div>
+                    </label>
+                    <label class="text" for="attention">
+                        <span>Attention To:</span>
+                        <div class="input-wrapper">
+                            <input type="text" placeholder="Chester Drawers" name="attention" id="attention_input">
+                        </div>
+                    </label>
+                    <div class="address">
+                        <label class="text" for="address">
+                            <span>Address:</span>
+
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="(Address line 1)" name="address" id="address_input">
+                                <input type="text" placeholder="(Address line 2)" name="address2" id="address2_input">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="city">
+                        <label class="text" for="City">
+                            <span>City:</span>
+
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="(City)" name="city" id="city_input">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="state">
+                        <label class="text" for="State">
+                            <span>State:</span>
+
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="(State)" name="state" id="state_input" required>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="zip">
+                        <label class="text" for="Zipcode">
+                            <span>Zipcode:</span>
+
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="(Zipcode)" name="zipcode" id="zipcode_input" required>
+                            </div>
+                        </label>
+                    </div>
+                    
+                    <br>
+                </div>    
+                    <h2>PATIENT INFORMATION</h2>
+                    <hr>
+                <div class="form-wrapper">
+                    <div class="name">
+                        <label class="text" for="name">
+                            <span>Patient Name:</span>
+                               <div class="input-wrapper">
+                                 <input type="text" placeholder="(Name)" name="name" id="name_input">
+                               </div>
+                        </label>
+                    </div>
+                    <div class="dob">
+                        <label class="text" for="dob">
+                            <span>Date of Birth:</span>
+
+                            <div class="input-wrapper">
+                                <input type="date" placeholder="(Date of Birth)" name="dob" id="dob_input">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="pataddress">
+                        <label class="text" for="PatAddress">
+                            <span>Patient Address:</span>
+
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="(Address line 1)" name="pataddress" id="pataddress_input">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="city">
+                        <label class="text" for="patcity">
+                            <span>City:</span>
+
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="(City)" name="patcity" id="patcity_input">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="state">
+                        <label class="text" for="patstate">
+                            <span>State:</span>
+
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="(State)" name="patstate" id="patstate_input" required>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="zip">
+                        <label class="text" for="patzipcode">
+                            <span>Zipcode:</span>
+
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="(Zipcode)" name="patzipcode" id="patzipcode_input" required>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="subject">
+                        <label class="dropdown" for="bestcontact">
+                            <span>Best Way To Contact:</span>
+                            <div class="input-wrapper">
+                                <select size="1" name="bestcontact" id="bestcontact_input">
+                                    <option disabled hidden selected><span>-- Select the best way to contact --</span></option>
+                                    <option value="1">Home Phone</option>
+                                    <option value="2">Work Phone</option>
+                                    <option value="3">Mobile Phone</option>
+                                    <option value="4">Email</option>
+                                    <option value="5">Text</option>
+                                    <option value="6">US Mail</option>
+                                    <option value="7">Fax</option>
+                                </select>
+                            </div>
+                        </label>
+                    </div>
+                     <div id="patphoneh" style="display:none;">
+                        <label class="text" for="patphoneh">
+                            <span>Home Phone:</span>
+
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="(Home Phone)" name="patphoneh" id="patphoneh_input">
+                            </div>
+                        </label>
+                    </div>
+                    <div id="patphonew" style="display:none;" >
+                        <label class="text" for="patphonew">
+                            <span>Work Phone:</span>
+
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="(Work Phone)" name="patphonew" id="patphonew_input">
+                            </div>
+                        </label>
+                    </div>
+                    <div id="patphonem" style="display:none;">
+                        <label class="text" for="patphonem">
+                            <span>Cell Phone:</span>
+
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="(Mobile phone - if best method to contact)" name="patphonem" id="patphonem_input">
+                            </div>
+                        </label>
+                    </div>
+                     <div id="patemail" style="display:none;">
+                        <label class="text" for="patemail">
+                            <span>Email Address:</span>
+
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="(Email address - if best method to contact)" name="patemail" id="patemail_input">
+                            </div>
+                        </label>
+                    </div>
+                    <div id="patfax" style="display:none;">
+                        <label class="text" for="patfax">
+                            <span>Fax:</span>
+
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="(Fax machine number)" name="patfax" id="patfax_input">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="Socialsecurity">
+                        <label class="text" for="PatSocSec">
+                            <span>Social Security Number:</span>
+
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="(Patient Social Security Number)" name="patsocsec" id="patsocsec_input">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="servicedate">
+                        <label class="text" for="servicedate">
+                            <span>Date(s) of Service Needed: From</span>
+                            <div class="input-wrapper">
+                                <input type="date" name="dates1" id="dates1_input">
+                            </div>
+                        <label class="text" for="servicedate2">
+                            <span>To:</span>
+                            <div class="input-wrapper">
+                                <input type="date" name="dates2" id="dates2_input">
+                            </div>
+                        </label>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="documents">
+                        <label class="text" for="documents">
+                            <span>Requested Documents or Reports:</span>
+
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="(Requested Documents or Reports)" name="documents" id="document_input">
+                                <input type="text" placeholder="" name="documents2" id="documents2_input">
+                            </div>
+                        </label>
+                    </div>
+                    <br>
+                    </div>
+                <h3>PATIENT DELIVERY DIRECTIVE SECTION</h3>
+                   <hr>
+                    <div class="form-wrapper">
+                    <div class="authorize">
+                        <label class="text" for="authorize">
+                            <span>I authorize:</span>
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="(From Above)" name="authorize" id="authorize_input">
+                            </div>
+                        </label>
+                        <label class="text" for="release">
+                            <span>to release my medical records to:</span>
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="LAW Office" name="release" id="release">
+                            </div>
+                        </label>
+                        <br>
+                    </div>
+                   
+                    <div class="authAddress">
+                        <label class="text" for="authAddress">
+                            <span>Street Address:</span>
+
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="801 North Pitt Street" name="authAddress" id="authAddress_input">
+                                <input type="text" placeholder="" name="authAddress2" id="authAddress2_input">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="city">
+                        <label class="text" for="authCity">
+                            <span>City:</span>
+
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="Anytown" name="authCity" id="authCity_input">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="state">
+                        <label class="text" for="authState">
+                            <span>State:</span>
+
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="USA" name="authState" id="authState_input">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="zip">
+                        <label class="text" for="authZipcode">
+                            <span>Zipcode:</span>
+
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="22111" name="authZipcode" id="authZipcode_input">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="city">
+                        <label class="text" for="authphone">
+                            <span>Home Phone:</span>
+
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="899-555-1122" name="authphone" id="authphone_input">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="city">
+                        <label class="text" for="authfax">
+                            <span>Fax:</span>
+
+                            <div class="input-wrapper">
+                                <input type="text" placeholder="899-555-1123" name="authfax" id="authfax_input">
+                            </div>
+                        </label>
+                    </div>
+                    <div class="facility">
+                        <label class="dropdown" for="delivery">
+                            <span>Select delivery method:</span>
+                            <div class="input-wrapper">
+                                <select size="1" name="delivery" id="delivery_input">
+                                    <option disabled hidden selected><span>-- Select Delivery Method --</span></option>
+                                    <option value="1">Pick up (sample methods)</option>
+                                    <option value="2">Electronic - CD/DVD/Web</option>
+                                    <option value="3">Fax</option>
+                                    
+                                </select>
+                            </div>
+                        </label>
+                        
+                    </div>
+                    <div class="unsigned">
+                        <label class="dropdown" for="unsigned">
+                            <span>Please send additional documents if the patient is not signing this authorization</span>
+                            <div class="input-wrapper">
+                                <select size="1" name="unsigned" id="unsigned_input">
+                                    <option disabled hidden selected><span>-- Select One --</span></option>
+                                    <option value="1">Parent of Minor Child</option>
+                                    <option value="2">Power of Attorney</option>
+                                    <option value="3">Representative of Deceased Estate</option>
+                                    <option value="4">Representative of Incapacitated Adult</option>
+                                    
+                                </select>
+                            </div>
+                        </label>
+                    </div>
+                    </div>
+                    <h3>ALLOWABLE MEDICAL RECORD COPY CHARGES</h3>
+                    <hr>
+                    <p>Health & Human Services 45 CFR 164.524(c)(4) allow the following charges:</p>
+                    <h4>$6.50 or Verifiable Actual Labor Costs (must meet OCR guidelines)</h4>
+                    <div class="signature">
+                        <span><p>Patient Signature________________________ </p></span>
+                        <span><p>Date_______________</p></span>
+                    </div>
+
+
+            </form>
+            <!-- // End form -->
+            </div>
+        </div>
+    </div>
+    <!-- // End #container -->
+</body>
+
+</html>
